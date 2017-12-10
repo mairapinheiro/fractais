@@ -2,15 +2,14 @@
 
 ## Preblema de estudo
 
-Certa vez um professor genial da EAU-UFF me apresentou um problema de pesquisa. Ele queria uma métrica capiturasse as tendências aglomerativas de estruturas urbanas. Porém não bastava apenas um análise de vizinho mais próximo, ou uma medida de k, ele também precisava de um método que fosse sensível à formação de padrões, ou seja, padrões aglomerativos.
+Certa vez um professor genial da EAU-UFF me apresentou um problema de pesquisa. Ele queria uma métrica capiturasse as tendências aglomerativas de estruturas urbanas. Porém não bastava apenas um análise de vizinho mais próximo, ou uma função K, ele também precisava de um método que fosse sensível à formação de padrões morfológicos.
 
 Sua abordagem tem como objetivo uma investigação sobre a interação entre sociedade e espaço.
 
 "We know since Lynch that physical differences guide minds and bodies in movement. Deep physical properties can also generate affordances. A step further, the challenges of interaction and social reproduction require humans to overcome distance (Hillier and Netto, 2002)."
 
-Então o problema de pesquisa ao fim foi: 
+Então o problema de pesquisa foi identificado como: 
 
-- Como criamos e preservamos informação no ambiente construido?
 - Como capturamos essa produção de ordem nos arranjos da forma.
 
 Ou ainda:
@@ -51,6 +50,8 @@ A contagem de células foi realizada no ArcGIS seguindo os referentes passos:
 
 Para o primeiro passo foi arbitrado um valor mínimo de escala de 0.7 (r^-1) e aplicado um fator de multiplicação de 5 (k)*. 
 
-Para o segundo passo foram contabilizadas as celulas nulas pois 
+Para o segundo passo foram contabilizadas as celulas nulas pois queremos trabalhar o espaço público, ou seja, as ruas, ou espaços não construídos.
+
+E por fim, o terceiro passo é a aplicação do box-counting à forma dos espaços não construídos.
 
 * Esses valores foram arbitrados, não existe uma lógica de escolha. Eu só me preocupei que o primeiro fosse menor que 1m e que k fosse menor que 10 para não gerar múltiplos muito altos.
