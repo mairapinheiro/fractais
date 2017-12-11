@@ -2,7 +2,7 @@
 
 ## Preblema de estudo
 
-Certa vez um professor genial da EAU-UFF me apresentou um problema de pesquisa. Ele queria uma métrica capiturasse as tendências aglomerativas de estruturas urbanas. Porém não bastava apenas um análise de vizinho mais próximo, ou uma função K, ele também precisava de um método que fosse sensível à formação de padrões morfológicos.
+Certa vez um professor genial da EAU-UFF me apresentou um problema de pesquisa. Ele queria uma métrica capturasse as tendências aglomerativas de estruturas urbanas. Porém não bastava apenas uma análise de vizinho mais próximo, ou uma função K, ele também precisava de um método que fosse sensível à formação de padrões morfológicos.
 
 Sua abordagem tem como objetivo uma investigação sobre a interação entre sociedade e espaço.
 
@@ -14,7 +14,7 @@ Então o problema de pesquisa foi identificado como:
 
 Ou ainda:
 
-"The idea is to measure information as levels of order and predictability, by capturing factal dimension in cellular arrangements. The higher the fractal dimension of certain form, the more cells tend to form complex, self-similar and fractional arrangements."
+"The idea is to measure information as levels of order and predictability, by capturing fractal dimension in cellular arrangements. The higher the fractal dimension of certain form, the more cells tend to form complex, self-similar and fractional arrangements."
 
 ## Por que a dimensão fractal (recorte metodológico)
 
@@ -24,7 +24,7 @@ Benoit Mandelbrot (1967; 1983) levantou a possibilidade de se definir valores fr
 
 Ou seja, conforme aumentamos os detalhes de um fenômeno, a resolução espacial aumenta.
 
-Dentre os diferentes métodos de cálculo do DF o box-counting é o mais utilizado. Ele consiste em se colocar uma estrutura sobre uma malha de tamanho 'U' e então conta-se o número de células (ou caixas) da malha que contém parte da estrutura, isto dá um certo número 'N' que depende do tamanho 'r', isto é 'N(r)'. Em seguida diminui-se o tamanho de 'r' progressivamente e com um fator de decaimento constante (k), o que consequentemente aumenta a constagem de células ou 'N(r)'.
+Dentre os diferentes métodos de cálculo do DF o box-counting é o mais utilizado. Ele consiste em se colocar uma estrutura sobre uma malha de tamanho 'U' e então conta-se o número de células (ou caixas) da malha que contém parte da estrutura, isto dá um certo número 'N' que depende do tamanho 'r', isto é 'N(r)'. Em seguida diminui-se o tamanho de 'r' progressivamente e com um fator de decaimento constante (k), o que consequentemente aumenta a contagem de células ou 'N(r)'.
 
 A partir desta contagem ajusta-se uma reta de regressão linear log x log onde o tamanho do segmento pode ser explicado pela escala de observação. Assim a dimensão fractal será o valor da inclinação da reta estimada na regressão.
 
@@ -42,15 +42,15 @@ log(N)=log(K)+(1-D)log(r)
 
 A contagem de células foi realizada no ArcGIS seguindo os referentes passos:
 
-1- Rasterização dos poligonos das edificações para os valores de celula (0.7, 3.5, 17.5, 87.5, 437.5, 2187.5)
+1- Rasterização dos polígonos das edificações para os valores de célula (0.7, 3.5, 17.5, 87.5, 437.5, 2187.5)
 
-2- Extração das celulas nulas para cada escala de análise
+2- Extração das células nulas para cada escala de análise
 
-3- Contagem do número de celulas nulas em cada escala.
+3- Contagem do número de células nulas em cada escala.
 
 Para o primeiro passo foi arbitrado um valor mínimo de escala de 0.7 (r^-1) e aplicado um fator de multiplicação de 5 (k)*. 
 
-Para o segundo passo foram contabilizadas as celulas nulas pois queremos trabalhar o espaço público, ou seja, as ruas, ou espaços não construídos.
+Para o segundo passo foram contabilizadas as células nulas pois queremos trabalhar o espaço público, ou seja, as ruas, ou espaços não construídos.
 
 E por fim, o terceiro passo é a aplicação do box-counting à forma dos espaços não construídos.
 
